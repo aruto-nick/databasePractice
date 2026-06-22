@@ -1,0 +1,12 @@
+services:
+  oracle_db:
+    image: oracle/database:23.5.0-free
+    volumes:
+      - ./oradata:/opt/oracle/oradata
+    tty: true
+    restart: always
+    ports:
+      - 1521:1521
+      - 5500:5500
+volumes:
+  oradata:
